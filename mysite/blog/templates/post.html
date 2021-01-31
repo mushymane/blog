@@ -1,7 +1,13 @@
-<a href="/">Go back</a><br /><br />
+{% extends 'base.html' %}
 
-<h2>{{ post.title }}</h2>
+{% block title %}{{ post.title }}{% endblock %}
 
-<div>
-    {{ post.content }}
-</div>
+{% block content %}
+    <a href="/"><- Go back</a><br /><br />
+
+    <h2>{{ post.title }}</h2>
+
+    <div>
+        {{ post.content }}
+    </div>
+{% endblock %}
